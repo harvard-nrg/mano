@@ -19,7 +19,7 @@ before_install: |
     pyenv install "$PYTHON"
     eval "$(pyenv init -)"
     pyenv virtualenv venv
-    source venv/bin/activate
+    pyenv activate venv
   fi
 install:
   - pip install pipenv --upgrade
