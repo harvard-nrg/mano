@@ -17,10 +17,7 @@ before_install: |
     brew install pyenv-virtualenv
     pyenv install "$PYTHON"
     eval "$(pyenv init -)"
-    echo "-- creating virtualenv --"
-    pyenv virtualenv venv
-    echo "-- done creating virtualenv --"
-    ls ~/.pyenv/versions
+    pyenv virtualenv "$PYTHON" venv
     pyenv activate venv
   fi
 install:
