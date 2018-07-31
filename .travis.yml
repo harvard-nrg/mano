@@ -17,9 +17,10 @@ before_install: |
     brew install pyenv-virtualenv
     pyenv install "$PYTHON"
     eval "$(pyenv init -)"
-    echo "$PATH"
-    ls ~/.pyenv/shims
+    echo "-- creating virtualenv --"
     pyenv virtualenv venv
+    echo "-- done creating virtualenv --"
+    ls ~/.pyenv/versions
     pyenv activate venv
   fi
 install:
