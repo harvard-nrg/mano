@@ -14,10 +14,11 @@ matrix:
 before_install: |
   if [ "$TRAVIS_OS_NAME" == "osx" ]; then 
     brew update
-    brew install openssl readline
     brew install pyenv-virtualenv
     pyenv install "$PYTHON"
     eval "$(pyenv init -)"
+    echo "$PATH"
+    ls ~/.pyenv/shims
     pyenv virtualenv venv
     pyenv activate venv
   fi
